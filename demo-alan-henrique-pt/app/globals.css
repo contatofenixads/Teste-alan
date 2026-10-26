@@ -1,17 +1,6 @@
-@import "tailwindcss";
-
-@theme inline {
-  --color-cream: #f5f2ea;
-  --color-cream-dark: #eae5d9;
-  --color-ink: #1e1b17;
-  --color-ink-muted: #5a544a;
-  --color-accent: #9d4e36;
-  --color-accent-hover: #7d3d2a;
-  --color-stone: #c5bfb2;
-
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #f5f2ea;
@@ -21,7 +10,6 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -36,6 +24,6 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid theme("colors.accent.DEFAULT");
   outline-offset: 3px;
 }
